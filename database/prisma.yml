@@ -1,0 +1,4 @@
+#endpoint: ''
+endpoint: https://us1.prisma.sh/weder-ribas-885196/hackernews-node/dev
+datamodel: datamodel.graphql
+secret: mysecret123
