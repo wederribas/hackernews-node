@@ -1,13 +1,36 @@
 const { GraphQLServer } = require("graphql-yoga");
 
+let links = [
+  {
+    id: "link-0",
+    url: "www.howtographql.com",
+    description: "FullStack tutorial for GraphQL"
+  }
+];
+
 const typeDefs = `
   type Query {
     info: String!
+    feed: [Link!]!
+  }
+
+  type Link {
+    id: ID!
+    description: String!
+    url: String!
   }
 `;
+
 const resolvers = {
   Query: {
-    info: () => null
+    info: () => null,
+    feed: () => links
+  },
+
+  Link: {
+    id: root => root.id,
+    description: root => root.description,
+    url: root => root.url
   }
 };
 
