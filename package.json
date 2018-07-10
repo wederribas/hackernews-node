@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
-    "prisma": "prisma"
+    "prisma": "prisma",
+    "playground": "graphql playground"
   },
   "dependencies": {
     "graphql-yoga": "^1.14.12",
